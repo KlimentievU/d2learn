@@ -7,8 +7,9 @@ namespace DOTA2Test.Items
         private string Name = "Blink_Dagger";
         private int PriceItem = 2100;
         private double MPCostItem;
-        private double DistanceItem = 900;
-        private double DamageItem ;
+        private double DistanceItem = 1200;
+        private double DamageItem;
+
 
 
         public override int GetPrice()

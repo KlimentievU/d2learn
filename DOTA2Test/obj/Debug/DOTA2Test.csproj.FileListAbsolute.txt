@@ -7,3 +7,6 @@ c:\users\pro\documents\visual studio 2015\Projects\DOTA2Test\DOTA2Test\obj\Debug
 C:\Users\Pro\Documents\Visual Studio 2015\Projects\DOTA2Test\d2learn2\DOTA2Test\bin\Debug\DOTA2Test.exe.config
 C:\Users\Pro\Documents\Visual Studio 2015\Projects\DOTA2Test\d2learn2\DOTA2Test\obj\Debug\DOTA2Test.exe
 C:\Users\Pro\Documents\Visual Studio 2015\Projects\DOTA2Test\d2learn2\DOTA2Test\obj\Debug\DOTA2Test.pdb
+C:\Users\Pro\Documents\Visual Studio 2015\Projects\DOTA2Test\d2learn2\DOTA2Test\bin\Debug\DOTA2Test.exe
+C:\Users\Pro\Documents\Visual Studio 2015\Projects\DOTA2Test\d2learn2\DOTA2Test\bin\Debug\DOTA2Test.pdb
+C:\Users\Pro\Documents\Visual Studio 2015\Projects\DOTA2Test\d2learn2\DOTA2Test\obj\Debug\DOTA2Test.csprojResolveAssemblyReference.cache
