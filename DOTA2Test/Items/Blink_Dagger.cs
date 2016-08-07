@@ -4,20 +4,22 @@ namespace DOTA2Test.Items
 {
     public class Blink_Dagger : AItem
     {
-        private string Name = "Blink_Dagger";
-        private int PriceItem = 2100;
-        private double MPCostItem;
-        private double DistanceItem = 1200;
-        private double DamageItem;
-
-
-
-        public override int GetPrice()
+        public Blink_Dagger()
         {
-            int pr = PriceItem;
-
-            return pr;
+          Name = "Blink_Dagger";
+          PriceItem = 2100;
+          MPCostItem = 0;
+          DistanceItem = 1200;
+          DamageItem = 0;
         }
+
+
+
+        public string GetName()
+        {
+            return Name;
+        }
+
 
         public override void ShowName()
         {

@@ -4,23 +4,27 @@ namespace DOTA2Test.Items
 {
     public class Dagon : AItem
     {
-        private string Name = "Dagon";
+        /*private string Name = "Dagon";
         private int PriceItem = 2700;
         private double MPCostItem = 100;
         private double DistanceItem = 100;
-        private double DamageItem = 400;
+        private double DamageItem = 400;*/
+
+
+        public Dagon()
+        {
+            Name = "Dagon";
+            PriceItem = 2700;
+            MPCostItem = 100;
+            DistanceItem = 100;
+            DamageItem = 400;
+        }
 
         public override void ShowName()
         {
             Console.Write(Name + " ");
         }
 
-        public override int GetPrice()
-        {
-            int pr = PriceItem;
-
-            return pr;
-        }
 
         public override void ShowPropertyItem()
         {

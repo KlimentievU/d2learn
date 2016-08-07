@@ -8,6 +8,6 @@ namespace DOTA2Test
         double GetRange();
         int GetManaCost();
         int GetDamage();
-        int GetColdaun();
+        int GetCooldown();
     }
 }

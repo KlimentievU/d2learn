@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace DOTA2Test
 {
@@ -69,6 +70,74 @@ namespace DOTA2Test
             Console.WriteLine("Итемы: ");
             for (int i = 0; i < temp; i++) Item[i].ShowName();
             Console.WriteLine();
+        }
+
+        public override void AddSkil(ASkils skil)
+        {
+            if (skils.Count < 5)
+            {
+                this.skils.Add((skil));
+            }
+            else
+            {
+                Console.WriteLine("Скилов уже 4!!!!");
+            }
+        }
+
+        public void UseSkil(ASkils skil, AHero hero)
+        {
+            if (this.GetMP() > skil.GetManaCost())
+            {
+
+                if (skil.GetCooldown() == 0.0)
+                {
+                    hero.SetHP(hero.GetHP() - skil.GetDamage());
+                    this.SetMP(this.GetMP() - skil.GetManaCost());
+                }
+                else
+                {
+                    Console.WriteLine("Скилл на колдауне");
+                }
+
+            }
+            else
+            {
+                Console.WriteLine("Не хватает МП");
+            }
+        }
+
+
+
+
+        public override List<ASkils> GetSkils()
+        {
+            return skils;
+        }
+
+
+
+
+        public void UseSkil(ASkils skil)
+        {
+            if (this.GetMP() > skil.GetManaCost())
+            {
+
+                if (skil.GetCooldown() == 0.0)
+                {
+                    this.SetHP(this.GetHP() + skil.GetHeal());
+                    this.SetMP(this.GetMP() - skil.GetManaCost());
+                }
+                else
+                {
+                    Console.WriteLine("Скилл на колдауне");
+                }
+
+            }
+            else
+            {
+                Console.WriteLine("Не хватает МП");
+            }
+
         }
 
     }

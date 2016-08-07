@@ -2,20 +2,17 @@
 {
     public class Skils : ASkils
     {
-        public Skils(double range, int mpcost, int damage, int coldoun)
+        public Skils(string name,double range, double mpcost, double damage, double heal, double coldoun)
         {
-            range = range;
-            mpcost = mpcost;
-            damage = damage;
-            coldoun = coldoun;
+            this.name = name;
+            this.range = range;
+            this.mpcost = mpcost;
+            this.damage = damage;
+            this.heal = heal;
+            this.coldoun = coldoun;
         }
 
-        public void UseSkil(AHero hero)
-        {
-            if(hero.GetMP() > mpcost)
-                if(coldoun == 0)
 
-        }
 
     }
 }

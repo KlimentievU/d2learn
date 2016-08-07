@@ -4,22 +4,20 @@ namespace DOTA2Test.Items
 {
     public class Desolator : AItem
     {
-        private string Name = "Desolator";
-        private int PriceItem = 5400;
-        private double MPCostItem;
-        private double DistanceItem;
-        private double DamageItem = 50;
+        public Desolator()
+        {
+            Name = "Desolator";
+            PriceItem = 5400;
+            MPCostItem = 0;
+            DistanceItem = 0;
+            DamageItem = 50;
+        }
+
+
 
         public override void ShowName()
         {
             Console.Write(Name + " ");
-        }
-
-        public override int GetPrice()
-        {
-            int pr = PriceItem;
-
-            return pr;
         }
 
         public override void ShowPropertyItem()

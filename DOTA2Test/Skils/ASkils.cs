@@ -1,28 +1,45 @@
 ﻿namespace DOTA2Test
 {
-    public abstract  class ASkils : ISkils
+    public abstract  class ASkils
     {
+        protected string name;
         protected double range;
-        protected int mpcost;
-        protected int damage;
-        protected int coldoun;
+        protected double mpcost;
+        protected double heal;
+        protected double damage;
+        protected double coldoun;
+
+        public double GetHeal()
+        {
+            return heal;
+        }
+
+        public void SetHeal(double val)
+        {
+            heal = val;
+        }
+
+        public string GetName()
+        {
+            return name;
+        }
 
         public double GetRange()
         {
             return range;
         }
 
-        public int GetManaCost()
+        public double GetManaCost()
         {
             return mpcost;
         }
 
-        public int GetDamage()
+        public double GetDamage()
         {
             return damage;
         }
 
-        public int GetColdaun()
+        public double GetCooldown()
         {
             return coldoun;
         }

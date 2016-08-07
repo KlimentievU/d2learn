@@ -4,22 +4,20 @@ namespace DOTA2Test.Items
 {
     public class Divine_Rapier : AItem
     {
-        private string Name = "Divine_Rapier";
-        private int PriceItem = 6000;
-        private double MPCostItem;
-        private double DistanceItem;
-        private double DamageItem = 300;
+
+        public Divine_Rapier()
+        {
+            Name = "Divine_Rapier";
+            PriceItem = 6000;
+            MPCostItem = 0;
+            DistanceItem = 0;
+            DamageItem = 300;
+        }
+
 
         public override void ShowName()
         {
             Console.Write(Name + " ");
-        }
-
-        public override int GetPrice()
-        {
-            int pr = PriceItem;
-
-            return pr;
         }
 
         public override void ShowPropertyItem()
