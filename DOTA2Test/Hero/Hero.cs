@@ -39,6 +39,7 @@ namespace DOTA2Test
 
         public override void SellItem()
         {
+            /////////////////////////////////////////////////////////////
             if (temp != 0)
             {
                 temp--;
