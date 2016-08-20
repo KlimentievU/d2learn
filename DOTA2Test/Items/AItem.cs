@@ -9,7 +9,7 @@ namespace DOTA2Test
         protected double MPCostItem;
         protected double DistanceItem;
         protected double DamageItem;
-
+//хуй пизда джигурда
         public  void ShowPropertyItem()
         {
 
