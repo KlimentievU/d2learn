@@ -15,14 +15,5 @@ namespace DOTA2Test.Items
         }
 
 
-        public override void ShowName()
-        {
-            Console.Write(Name + " ");
-        }
-
-        public override void ShowPropertyItem()
-        {
-            Console.WriteLine("Название: {0} Цена: {1} MP: {2} Дистанция: {3} Дамаг: {4}", Name, PriceItem, MPCostItem, DistanceItem, DamageItem);
-        }
     }
 }
