@@ -18,7 +18,7 @@ namespace DOTA2Test
         }
 
 
-         public int temp = 0;
+        public int temp = 0;
 
         public override void BuyItem(AItem name)
         {

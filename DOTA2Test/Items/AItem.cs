@@ -13,7 +13,8 @@ namespace DOTA2Test
         public  void ShowPropertyItem()
         {
 
-            Console.WriteLine("Название: {0} Цена: {1} MP: {2} Дистанция: {3} Дамаг: {4}", Name, PriceItem, MPCostItem, DistanceItem, DamageItem);
+            Console.WriteLine("Название: {0} Цена: {1} MP: {2} Дистанция: {3} Дамаг: {4}", Name, PriceItem,
+                                                                        MPCostItem, DistanceItem, DamageItem);
         }
 
         public  void ShowName()
