@@ -2,14 +2,14 @@
 
 namespace DOTA2Test.Items
 {
-    public class Shadow_Blade : AItem
+    public class ShadowBlade : AItem
     {
 
-        public Shadow_Blade()
+        public ShadowBlade()
         {
-            Name = "Shadow_Blade";
+            Name = "ShadowBlade";
             PriceItem = 2400;
-            MPCostItem = 90;
+            MpCostItem = 90;
             DistanceItem = 0;
             DamageItem = 120;
         }

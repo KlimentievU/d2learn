@@ -8,7 +8,7 @@ namespace DOTA2Test.Items
         {
             Name = "Desolator";
             PriceItem = 5400;
-            MPCostItem = 0;
+            MpCostItem = 0;
             DistanceItem = 0;
             DamageItem = 50;
         }

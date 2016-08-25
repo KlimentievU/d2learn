@@ -11,43 +11,43 @@ namespace DOTA2Test
     {
         static void Main(string[] args)
         {
-            Hero hero = new Hero("ПАДЖ",2000,2000,1000);
-            hero.ShowALLInfo();
+            Hero hero = new Hero("Pudge",2000,2000,1000);
+            hero.ShowAllInfo();
 
-            Hero hero2 = new Hero("ПУГНА",1000,1000,1000);
-            hero2.ShowALLInfo();
+            Hero hero2 = new Hero("Pugna",1000,1000,1000);
+            hero2.ShowAllInfo();
 
-            hero.BuyItem(new Blink_Dagger());
+            hero.BuyItem(new BlinkDagger());
             hero2.BuyItem(new Dagon());
 
             hero.SetMoneys(100);
             hero2.SetMoneys(1700);
 
-            hero.ShowALLInfo();
-            hero2.ShowALLInfo();
+            hero.ShowAllInfo();
+            hero2.ShowAllInfo();
 
-            hero.BuyItem(new Blink_Dagger());
+            hero.BuyItem(new BlinkDagger());
             hero2.BuyItem(new Dagon());
 
-            hero.ShowALLInfo();
-            hero2.ShowALLInfo();
+            hero.ShowAllInfo();
+            hero2.ShowAllInfo();
 
-            Skils Huk = new Skils("Хук", 1400,200,400,0,0);
-            Skils Huk2 = new Skils("Хук2", 1400, 300, 200, 0, 0);
+            Skills huk = new Skills("Huck", 1400,200,400,0,0);
+            Skills huk2 = new Skills("Huck2", 1400, 300, 200, 0, 0);
 
 
-            hero.AddSkil(Huk);
-            hero.AddSkil(Huk2);
+            hero.AddSkil(huk);
+            hero.AddSkil(huk2);
             
             hero.UseSkil(hero.GetSkils()[0],hero2);
 
-            hero.ShowALLInfo();
-            hero2.ShowALLInfo();
+            hero.ShowAllInfo();
+            hero2.ShowAllInfo();
 
             hero.UseSkil(hero.GetSkils()[1], hero2);
 
-            hero.ShowALLInfo();
-            hero2.ShowALLInfo();
+            hero.ShowAllInfo();
+            hero2.ShowAllInfo();
         }
     }
 }

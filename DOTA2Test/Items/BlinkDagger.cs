@@ -2,13 +2,13 @@
 
 namespace DOTA2Test.Items
 {
-    public class Blink_Dagger : AItem
+    public class BlinkDagger : AItem
     {
-        public Blink_Dagger()
+        public BlinkDagger()
         {
-          Name = "Blink_Dagger";
+          Name = "BlinkDagger";
           PriceItem = 2100;
-          MPCostItem = 0;
+          MpCostItem = 0;
           DistanceItem = 1200;
           DamageItem = 0;
         }

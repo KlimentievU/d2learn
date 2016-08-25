@@ -46,16 +46,15 @@
     <Compile Include="Hero\Hero.cs" />
     <Compile Include="Hero\AHero.cs" />
     <Compile Include="Items\AItem.cs" />
-    <Compile Include="Items\Blink_Dagger.cs" />
+    <Compile Include="Items\BlinkDagger.cs" />
     <Compile Include="Items\Dagon.cs" />
     <Compile Include="Items\Desolator.cs" />
-    <Compile Include="Items\Divine_Rapier.cs" />
-    <Compile Include="Items\Shadow_Blade.cs" />
+    <Compile Include="Items\DivineRapier.cs" />
+    <Compile Include="Items\ShadowBlade.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Skils\ASkils.cs" />
-    <Compile Include="Skils\ISkils.cs" />
-    <Compile Include="Skils\Skils.cs" />
+    <Compile Include="Skils\ASkills.cs" />
+    <Compile Include="Skils\Skills.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

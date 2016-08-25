@@ -5,43 +5,20 @@ namespace DOTA2Test
 {
     public abstract class AHero
     {
-        protected string Name { get; set; }
+        public string Name { get; set; }
         protected int  Moneys { get; set; }
         protected AItem[] Item = new AItem[6];
-        protected List<ASkils> skils = new List<ASkils>();
+        protected List<ASkills> Skils = new List<ASkills>();
 
-        protected ASkils[] Skil = new ASkils[4];
+        protected ASkills[] Skill = new ASkills[4];
 
-        protected double HP;
+        public double Hp { get; set; }
 
-        protected double MP { get; set; }
+        public double Mp { get; set; }
 
-        public string GetName_Hero()
-        {
-            return Name;
-        }
 
-        public double GetMP()
-        {
-            return MP;
-        }
-
-        public void SetMP(double val)
-        {
-            MP = val;
-        }
-
-        public double GetHP()
-        {
-            return HP;
-        }
-        public void SetHP(double val)
-        {
-            HP = val;
-        }
-
-        public abstract List<ASkils> GetSkils(); 
-        public abstract void AddSkil(ASkils skils);
+        public abstract List<ASkills> GetSkils(); 
+        public abstract void AddSkil(ASkills skils);
         public abstract void BuyItem(AItem name);
         public abstract void SellItem();
         public abstract void SetMoneys(int number);

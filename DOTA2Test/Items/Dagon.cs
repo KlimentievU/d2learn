@@ -9,7 +9,7 @@ namespace DOTA2Test.Items
         {
             Name = "Dagon";
             PriceItem = 2700;
-            MPCostItem = 100;
+            MpCostItem = 100;
             DistanceItem = 100;
             DamageItem = 400;
         }

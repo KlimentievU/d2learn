@@ -2,14 +2,14 @@
 
 namespace DOTA2Test.Items
 {
-    public class Divine_Rapier : AItem
+    public class DivineRapier : AItem
     {
 
-        public Divine_Rapier()
+        public DivineRapier()
         {
-            Name = "Divine_Rapier";
+            Name = "DivineRapier";
             PriceItem = 6000;
-            MPCostItem = 0;
+            MpCostItem = 0;
             DistanceItem = 0;
             DamageItem = 300;
         }
