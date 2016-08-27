@@ -55,9 +55,9 @@
     <Compile Include="Item\Items\ShadowBlade.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Skills\ASkills.cs" />
-    <Compile Include="Skills\ISkills.cs" />
-    <Compile Include="Skills\Skills.cs" />
+    <Compile Include="Skills\ASkill.cs" />
+    <Compile Include="Skills\ISkill.cs" />
+    <Compile Include="Skills\Skill.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

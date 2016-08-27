@@ -11,18 +11,18 @@ namespace DOTA2Test
         public double Mp { get; set; }
 
         protected InterfaceItem[] Item = new InterfaceItem[6];
-        protected List<ISkills> Skils = new List<ISkills>();
-        protected ISkills[] Skill = new ISkills[4];
+        protected List<ISkill> Skils = new List<ISkill>();
+        //protected ISkill[] Skill = new ISkill[4];
 
         
-        public abstract List<ISkills> GetSkils(); 
-        public abstract void AddSkill(ISkills skils);
+        public abstract List<ISkill> GetSkils(); 
+        public abstract void AddSkill(ISkill skils);
         public abstract void BuyItem(InterfaceItem name);
-        public abstract void SellItem();
+        public abstract void SellItem(int item);
         public abstract void AddMoneys(int number);
         public abstract void ShowItem();
-        public abstract void UseSkill(ISkills skill, IHero hero);
-        public abstract void UseSkill(ISkills skill);
+        public abstract void UseSkill(ISkill skill, IHero hero);
+        public abstract void UseSkill(ISkill skill);
         public abstract void ShowAllInfo();
     }
 }

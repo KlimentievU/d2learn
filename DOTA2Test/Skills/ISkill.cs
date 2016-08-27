@@ -1,6 +1,6 @@
 ﻿namespace DOTA2Test
 {
-    public interface ISkills
+    public interface ISkill
     {
          string Name { get; set; }
          double Range { get; set; }

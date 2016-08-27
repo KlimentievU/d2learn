@@ -5,6 +5,8 @@ namespace DOTA2Test
 {
     public class Hero : AHero
     {
+        public int ItemsInHero = 0;
+
         public Hero(string name, int moneys, double hp, double mp)
         {
             Name = name;
@@ -12,8 +14,6 @@ namespace DOTA2Test
             Hp = hp;
             Mp = mp;
         }
-
-        public int ItemsInHero = 0;
 
         public override void BuyItem(InterfaceItem name)
         {
@@ -32,12 +32,12 @@ namespace DOTA2Test
 
         }
 
-        public override void SellItem()
+        public override void SellItem(int numberItem)
         {
-            if (ItemsInHero != 0)
+            if (ItemsInHero != 0 && Item[numberItem] != null) //от 0 до 6
             {
                 ItemsInHero--;
-                Item[ItemsInHero] = null;
+                Item[numberItem] = null;
             }
             else
             {
@@ -70,7 +70,7 @@ namespace DOTA2Test
             Console.WriteLine();
         }
 
-        public override void AddSkill(ISkills skil)
+        public override void AddSkill(ISkill skil)
         {
             if (Skils.Count < 5)
             {
@@ -82,7 +82,7 @@ namespace DOTA2Test
             }
         }
 
-        public override void UseSkill(ISkills skil, IHero hero)
+        public override void UseSkill(ISkill skil, IHero hero)
         {
             if (this.Mp > skil.Mpcost)
             {
@@ -104,13 +104,13 @@ namespace DOTA2Test
             }
         }
 
-        public override List<ISkills> GetSkils()
+        public override List<ISkill> GetSkils()
         {
             return Skils;
         }
 
 
-        public override void UseSkill(ISkills skill)
+        public override void UseSkill(ISkill skill)
         {
             if (this.Mp > skill.Mpcost)
             {

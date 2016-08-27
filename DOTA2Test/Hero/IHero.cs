@@ -10,14 +10,14 @@ namespace DOTA2Test
          double Mp { get; set; }
 
 
-        List<ISkills> GetSkils();
-         void AddSkill(ISkills skils);
+        List<ISkill> GetSkils();
+         void AddSkill(ISkill skils);
          void BuyItem(InterfaceItem name);
-         void SellItem();
+         void SellItem(int item);
          void AddMoneys(int number);
          void ShowItem();
-         void UseSkill(ISkills skil, IHero hero);
-        void UseSkill(ISkills skill);
+         void UseSkill(ISkill skil, IHero hero);
+        void UseSkill(ISkill skill);
         void ShowAllInfo();
 
     }

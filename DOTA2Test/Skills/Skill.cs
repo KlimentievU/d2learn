@@ -1,8 +1,8 @@
 ﻿namespace DOTA2Test
 {
-    public class Skills : ASkills
+    public class Skill : ASkill
     {
-        public Skills(string name,double range, double mpcost, double damage, double heal, double coldoun)
+        public Skill(string name,double range, double mpcost, double damage, double heal, double coldoun)
         {
             this.Name = name;
             this.Range = range;

@@ -33,8 +33,8 @@ namespace DOTA2Test
             hero.ShowAllInfo();
             hero2.ShowAllInfo();
 
-            ISkills huk = new Skills("Huck", 1400,200,400,0,0);
-            ISkills huk2 = new Skills("Huck2", 1400, 300, 200, 0, 0);
+            ISkill huk = new Skill("Huck", 1400,200,400,0,0);
+            ISkill huk2 = new Skill("Huck2", 1400, 300, 200, 0, 0);
 
 
             hero.AddSkill(huk);
@@ -46,6 +46,21 @@ namespace DOTA2Test
             hero2.ShowAllInfo();
 
             hero.UseSkill(hero.GetSkils()[1], hero2);
+
+            hero.ShowAllInfo();
+            hero2.ShowAllInfo();
+
+            hero.AddMoneys(10000);
+            hero2.AddMoneys(10000);
+
+            hero.BuyItem(new DivineRapier());
+            hero2.BuyItem(new DivineRapier());
+
+            hero.ShowAllInfo();
+            hero2.ShowAllInfo();
+
+            hero.SellItem(1);
+            hero2.SellItem(1);
 
             hero.ShowAllInfo();
             hero2.ShowAllInfo();

@@ -1,6 +1,6 @@
 ﻿namespace DOTA2Test
 {
-    public abstract  class ASkills : ISkills
+    public abstract  class ASkill : ISkill
     {
         public string Name { get; set; }
         public double Range { get; set; }
