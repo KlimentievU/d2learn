@@ -3,25 +3,26 @@ using System.Collections.Generic;
 
 namespace DOTA2Test
 {
-    public abstract class AHero
+    public abstract class AHero : IHero
     {
         public string Name { get; set; }
-        protected int  Moneys { get; set; }
-        protected AItem[] Item = new AItem[6];
-        protected List<ASkills> Skils = new List<ASkills>();
-
-        protected ASkills[] Skill = new ASkills[4];
-
+        public int  Moneys { get; set; }
         public double Hp { get; set; }
-
         public double Mp { get; set; }
 
+        protected InterfaceItem[] Item = new InterfaceItem[6];
+        protected List<ISkills> Skils = new List<ISkills>();
+        protected ISkills[] Skill = new ISkills[4];
 
-        public abstract List<ASkills> GetSkils(); 
-        public abstract void AddSkil(ASkills skils);
-        public abstract void BuyItem(AItem name);
+        
+        public abstract List<ISkills> GetSkils(); 
+        public abstract void AddSkill(ISkills skils);
+        public abstract void BuyItem(InterfaceItem name);
         public abstract void SellItem();
-        public abstract void SetMoneys(int number);
+        public abstract void AddMoneys(int number);
         public abstract void ShowItem();
+        public abstract void UseSkill(ISkills skill, IHero hero);
+        public abstract void UseSkill(ISkills skill);
+        public abstract void ShowAllInfo();
     }
 }

@@ -13,24 +13,19 @@ namespace DOTA2Test
             Mp = mp;
         }
 
-        public Hero()
-        {
-        }
+        public int ItemsInHero = 0;
 
-
-        public int Temp = 0;
-
-        public override void BuyItem(AItem name)
+        public override void BuyItem(InterfaceItem name)
         {
             Console.Write("При покупке итема ");
             name.ShowName();
         
-            int i = name.PriceItem;
-          if(i <= Moneys)
+            int price = name.PriceItem;
+          if(price <= Moneys)
            {
-                Item[Temp] = name;
-                Temp++;
-                Moneys = Moneys - i;
+                Item[ItemsInHero] = name;
+                ItemsInHero++;
+                Moneys = Moneys - price;
                 Console.WriteLine("Итем куплен");
             }
           else Console.WriteLine("НЕдостаточно денег");
@@ -39,10 +34,10 @@ namespace DOTA2Test
 
         public override void SellItem()
         {
-            if (Temp != 0)
+            if (ItemsInHero != 0)
             {
-                Temp--;
-                Item[Temp] = null;
+                ItemsInHero--;
+                Item[ItemsInHero] = null;
             }
             else
             {
@@ -51,28 +46,31 @@ namespace DOTA2Test
             }
         }
 
-        public override void SetMoneys(int number)
+        public override void AddMoneys(int number)
         {
-            Moneys = Moneys + number;
+            Moneys += number;
         }
 
 
         public override void ShowItem()
         {
             Console.WriteLine("У перса {0} такие итемы: ",Name);
-            for (int i = 0; i < Temp; i++) Item[i].ShowName();
+            for (int i = 0; i < ItemsInHero; i++)
+            {
+                Item[i].ShowName();
+            }
             Console.WriteLine();
         }
 
-        public  void ShowAllInfo()
+        public override  void ShowAllInfo()
         {
             Console.WriteLine("Вся информация : {0}\t {1}\t xp: {2} mp: {3} ",Name,Moneys,Hp,Mp);
             Console.WriteLine("Итемы: ");
-            for (int i = 0; i < Temp; i++) Item[i].ShowName();
+            for (int i = 0; i < ItemsInHero; i++) Item[i].ShowName();
             Console.WriteLine();
         }
 
-        public override void AddSkil(ASkills skil)
+        public override void AddSkill(ISkills skil)
         {
             if (Skils.Count < 5)
             {
@@ -84,7 +82,7 @@ namespace DOTA2Test
             }
         }
 
-        public void UseSkil(ASkills skil, AHero hero)
+        public override void UseSkill(ISkills skil, IHero hero)
         {
             if (this.Mp > skil.Mpcost)
             {
@@ -106,26 +104,21 @@ namespace DOTA2Test
             }
         }
 
-
-
-
-        public override List<ASkills> GetSkils()
+        public override List<ISkills> GetSkils()
         {
             return Skils;
         }
 
 
-
-
-        public void UseSkil(ASkills skil)
+        public override void UseSkill(ISkills skill)
         {
-            if (this.Mp > skil.Mpcost)
+            if (this.Mp > skill.Mpcost)
             {
 
-                if (skil.Coldoun == 0.0)
+                if (skill.Coldoun == 0.0)
                 {
-                    this.Hp = (this.Hp + skil.Heal);
-                    this.Mp = (this.Mp - skil.Mpcost);
+                    this.Hp = (this.Hp + skill.Heal);
+                    this.Mp = (this.Mp - skill.Mpcost);
                 }
                 else
                 {
